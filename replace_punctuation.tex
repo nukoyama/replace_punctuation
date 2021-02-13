@@ -1,0 +1,89 @@
+%% Typeset: uplatex
+\documentclass[uplatex,a6paper,papersize]{jsarticle}
+
+%% 句読点（、。）を含むUnicode Blockのカテゴリーコードを15に変更
+\kcatcode"3000=15
+
+%% Unicode文字を再定義
+\usepackage{newunicodechar}
+%% CJK Symbols and Punctuation
+%% Range: 3000—303F
+%% Quantity of characters: 64
+\newunicodechar{　}{\char"3000}
+\newunicodechar{、}{\char"FF0C}% <- 3001
+\newunicodechar{。}{\char"FF0E}% <- 3002
+\newunicodechar{〃}{\char"3003}
+\newunicodechar{〄}{\char"3004}
+\newunicodechar{々}{\char"3005}
+\newunicodechar{〆}{\char"3006}
+\newunicodechar{〇}{\char"3007}
+\newunicodechar{〈}{\char"3008}
+\newunicodechar{〉}{\char"3009}
+\newunicodechar{《}{\char"300A}
+\newunicodechar{》}{\char"300B}
+\newunicodechar{「}{\char"300C}
+\newunicodechar{」}{\char"300D}
+\newunicodechar{『}{\char"300E}
+\newunicodechar{』}{\char"300F}
+\newunicodechar{【}{\char"3010}
+\newunicodechar{】}{\char"3011}
+\newunicodechar{〒}{\char"3012}
+\newunicodechar{〓}{\char"3013}
+\newunicodechar{〔}{\char"3014}
+\newunicodechar{〕}{\char"3015}
+\newunicodechar{〖}{\char"3016}
+\newunicodechar{〗}{\char"3017}
+\newunicodechar{〘}{\char"3018}
+\newunicodechar{〙}{\char"3019}
+\newunicodechar{〚}{\char"301A}
+\newunicodechar{〛}{\char"301B}
+\newunicodechar{〜}{\char"301C}
+\newunicodechar{〝}{\char"301D}
+\newunicodechar{〞}{\char"301E}
+\newunicodechar{〟}{\char"301F}
+\newunicodechar{〠}{\char"3020}
+\newunicodechar{〡}{\char"3021}
+\newunicodechar{〢}{\char"3022}
+\newunicodechar{〣}{\char"3023}
+\newunicodechar{〤}{\char"3024}
+\newunicodechar{〥}{\char"3025}
+\newunicodechar{〦}{\char"3026}
+\newunicodechar{〧}{\char"3027}
+\newunicodechar{〨}{\char"3028}
+\newunicodechar{〩}{\char"3029}
+\newunicodechar{〪}{\char"302A}
+\newunicodechar{〫}{\char"302B}
+\newunicodechar{〬}{\char"302C}
+\newunicodechar{〭}{\char"302D}
+\newunicodechar{〮}{\char"302E}
+\newunicodechar{〯}{\char"302F}
+\newunicodechar{〰}{\char"3030}
+\newunicodechar{〱}{\char"3031}
+\newunicodechar{〲}{\char"3032}
+\newunicodechar{〳}{\char"3033}
+\newunicodechar{〴}{\char"3034}
+\newunicodechar{〵}{\char"3035}
+\newunicodechar{〶}{\char"3046}
+\newunicodechar{〷}{\char"3047}
+\newunicodechar{〸}{\char"3038}
+\newunicodechar{〹}{\char"3039}
+\newunicodechar{〺}{\char"303A}
+\newunicodechar{〻}{\char"303B}
+\newunicodechar{〼}{\char"303C}
+\newunicodechar{〽}{\char"303D}
+\newunicodechar{〾}{\char"303E}
+\newunicodechar{〿}{\char"303F}
+
+%% 元の句読点を退避
+\newcommand\読点{\char"3001}
+\newcommand\句点{\char"3002}
+
+\begin{document}\huge
+
+やあ，こんにちは．
+
+やあ、こんにちは。
+
+やあ\読点 こんにちわ\句点
+
+\end{document}
